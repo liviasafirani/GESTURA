@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        BISINDO Detection System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========================================= -->
+        <!-- Header -->
+        <!-- ========================================= -->
+
+        <header>
+
+            <h1>
+                BISINDO Detection System
+            </h1>
+
+        </header>
+
+        <!-- ========================================= -->
+        <!-- Main -->
+        <!-- ========================================= -->
+
+        <main>
+
+            <!-- Camera -->
+
+            <section class="camera-panel">
+
+                <video
+
+                    id="camera"
+
+                    autoplay
+
+                    playsinline
+
+                ></video>
+
+                <canvas
+
+                    id="canvas"
+
+                    hidden
+
+                ></canvas>
+
+            </section>
+
+            <!-- Prediction -->
+
+            <section class="prediction-panel">
+
+                <h2>
+
+                    Prediction
+
+                </h2>
+
+                <div class="info">
+
+                    <p>
+
+                        Gesture
+
+                    </p>
+
+                    <span id="gesture">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="info">
+
+                    <p>
+
+                        Confidence
+
+                    </p>
+
+                    <span id="confidence">
+
+                        0 %
+
+                    </span>
+
+                </div>
+
+                <div class="info">
+
+                    <p>
+
+                        FPS
+
+                    </p>
+
+                    <span id="fps">
+
+                        0
+
+                    </span>
+
+                </div>
+
+                <div class="info">
+
+                    <p>
+
+                        Status
+
+                    </p>
+
+                    <span id="status">
+
+                        Disconnected
+
+                    </span>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- ========================================= -->
+        <!-- Mode -->
+        <!-- ========================================= -->
+
+        <section class="mode-panel">
+
+            <h2>
+
+                Detection Mode
+
+            </h2>
+
+            <label>
+
+                <input
+
+                    type="radio"
+
+                    name="mode"
+
+                    value="numbers"
+
+                    checked
+
+                >
+
+                Numbers
+
+            </label>
+
+            <label>
+
+                <input
+
+                    type="radio"
+
+                    name="mode"
+
+                    value="alphabets"
+
+                >
+
+                Alphabets
+
+            </label>
+
+            <label>
+
+                <input
+
+                    type="radio"
+
+                    name="mode"
+
+                    value="words"
+
+                >
+
+                Words
+
+            </label>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- Button -->
+        <!-- ========================================= -->
+
+        <section class="button-panel">
+
+            <button id="start-btn">
+
+                Start Camera
+
+            </button>
+
+            <button id="stop-btn">
+
+                Stop Camera
+
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="/static/js/app.js"></script>
+
+</body>
+
+</html>
